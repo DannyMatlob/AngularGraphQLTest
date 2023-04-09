@@ -3,7 +3,7 @@
     <title>Sandwich Builder</title>
     <link rel="stylesheet" href="style.css">
     <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script src = "sandwichBuilder.js"></script>
+    <script src = "sandwichBuilder.js" type="module"></script>
   </head>
 
   <body ng-app = "mainApp" ng-controller = "sandwichController">
@@ -13,9 +13,9 @@
         <label for="bread">Choose your bread:</label>
         <select ng-model="selectedBread" id="bread">
             <option disabled selected value>-- select an option --</option>
-            <option value="white">White</option>
-            <option value="wheat">Wheat</option>
-            <option value="rye">Rye</option>
+            <option value="White">White</option>
+            <option value="Wheat">Wheat</option>
+            <option value="Rye">Rye</option>
         </select>
     </section>
 
@@ -26,16 +26,16 @@
         <label for="topping1">Choose your first topping:</label>
         <select ng-model="selectedTopping1" id="topping1">
             <option disabled selected value>-- select an option --</option>
-            <option value="ham">Ham</option>
-            <option value="turkey">Turkey</option>
-            <option value="roast beef">Roast beef</option>
+            <option value="Ham">Ham</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Roast Beef">Roast beef</option>
         </select>
         <label for="topping2">Choose your second topping:</label>
         <select ng-model="selectedTopping2" id="topping2">
             <option disabled selected value>-- select an option --</option>
-            <option value="cheese">Cheese</option>
-            <option value="lettuce">Lettuce</option>
-            <option value="tomato">Tomato</option>
+            <option value="Cheese">Cheese</option>
+            <option value="Lettuce">Lettuce</option>
+            <option value="Tomato">Tomato</option>
         </select>
     </section>
 
@@ -46,24 +46,27 @@
         <label for="condiment1">Choose your first condiment:</label>
         <select ng-model="selectedCondiment1" id="condiment1">
             <option disabled selected value>-- select an option --</option>
-            <option value="mayo">Mayo</option>
-            <option value="mustard">Mustard</option>
-            <option value="ketchup">Ketchup</option>
+            <option value="Mayo">Mayo</option>
+            <option value="Mustard">Mustard</option>
+            <option value="Ketchup">Ketchup</option>
         </select>
         <label for="condiment2">Choose your second condiment:</label>
         <select ng-model="selectedCondiment2" id="condiment2">
             <option disabled selected value>-- select an option --</option>
-            <option value="relish">Relish</option>
-            <option value="sauerkraut">Sauerkraut</option>
-            <option value="mustard">Mustard</option>
+            <option value="Relish">Relish</option>
+            <option value="Sauerkraut">Sauerkraut</option>
+            <option value="Pesto">Pesto</option>
         </select>
     </section>
     
     <hr><hr>
     
-    <button ng-click="buildSandwich()">Build Sandwich</button>
+    <button ng-click="buildSandwich()">Check Ingredients</button>
     <h2>Assembled Sandwich</h2>
-    <p>{{sandwich.fullSandwich()}}</p>
-    <canvas></canvas>
+    <p ng-bind="breadStock"></p>
+    <p ng-bind="topping1Stock"></p>
+    <p ng-bind="topping2Stock"></p>
+    <p ng-bind="condiment1Stock"></p>
+    <p ng-bind="condiment2Stock"></p>
   </body>
 </html>

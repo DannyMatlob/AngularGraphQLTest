@@ -71,3 +71,7 @@ body {
     transform: translateY(5px);
     transition: 200ms;
   }
+
+  #resultDiv {
+    height: 500px;
+  }

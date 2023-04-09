@@ -29,10 +29,10 @@ var mainApp = angular.module("mainApp", []);
                 condiment2Stock: await getStock($scope.selectedCondiment2),
             });
             console.log(sandwichObject);
-            $scope.breadStock = sandwichObject.bread + ": " + sandwichObject.breadStock;
-            $scope.topping1Stock = sandwichObject.topping1 + ": " + sandwichObject.topping1Stock;
-            $scope.topping2Stock = sandwichObject.topping2 + ": " + sandwichObject.topping2Stock;
-            $scope.condiment1Stock = sandwichObject.condiment1 + ": " + sandwichObject.condiment1Stock;
-            $scope.condiment2Stock = sandwichObject.condiment2 + ": " + sandwichObject.condiment2Stock;
+            $scope.breadStock = sandwichObject.bread + " stock remaining: " + sandwichObject.breadStock;
+            $scope.topping1Stock = sandwichObject.topping1 + " stock remaining: " + sandwichObject.topping1Stock;
+            $scope.topping2Stock = sandwichObject.topping2 + " stock remaining: " + sandwichObject.topping2Stock;
+            $scope.condiment1Stock = sandwichObject.condiment1 + " stock remaining: " + sandwichObject.condiment1Stock;
+            $scope.condiment2Stock = sandwichObject.condiment2 + " stock remaining: " + sandwichObject.condiment2Stock;
         }
     });
